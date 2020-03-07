@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h2>Hangman</h2>
+    <h3>Find the hidden word - Enter a letter</h3>
+    <div class="drawing">
+      <svg class="hangman" height="250" width="200">
+        <line x1="60" y1="20" x2="140" y2="20" />
+        <line x1="140" y1="20" x2="140" y2="50" />
+        <line x1="60" y1="20" x2="60" y2="230" />
+        <line x1="20" y1="230" x2="100" y2="230" />
+        <!-- Head  -->
+        <circle cx="140" cy="70" r="20" class="hangman-part" />
+        <!-- Body -->
+        <line x1="140" y1="90" x2="140" y2="150" class="hangman-part" />
+        <!-- Arms -->
+        <line x1="140" y1="120" x2="120" y2="100" class="hangman-part" />
+        <line x1="140" y1="120" x2="160" y2="100" class="hangman-part" />
+        <!-- Legs -->
+        <line x1="140" y1="150" x2="120" y2="180" class="hangman-part" />
+        <line x1="140" y1="150" x2="160" y2="180" class="hangman-part" />
+      </svg>
+      <div class="wrong-letters" id="wrong-letters"></div>
+    </div>
+    <div class="response" id="response"></div>
+    <!-- PopUp -->
+    <div class="popup-container" id="popup-container">
+      <div class="popup">
+        <p id="final-message">You won</p>
+        <button id="play-button">Play Again</button>
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification " id="notification">
+      <p>You have already entred this letter</p>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
